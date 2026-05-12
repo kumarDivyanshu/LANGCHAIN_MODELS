@@ -6,7 +6,9 @@ load_dotenv()
 
 llm = HuggingFaceEndpoint(model="deepseek-ai/DeepSeek-V4-Flash",
 task ="text-generation")
+
 model = ChatHuggingFace(llm=llm)
+
 messages = [
     SystemMessage(content="You are a helpful assistant."),
     HumanMessage(content="Tell me about LangChain.")
